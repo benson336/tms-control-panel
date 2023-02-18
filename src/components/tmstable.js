@@ -24,7 +24,7 @@ export default function TMSTable(){
     return (
         <>
         <div style={{"position":"absolute", "left":"15%", "top":"440px", "width": "75%", "height": "6.0rem"}}> 
-            <div class=" p-4 br-1 br-grey100 br-ra4">
+            <div class="br-ra4" style={{"border":"3px solid #ececec"}}>
                 <table class="unis-info-table">
                     <thead style={{"backgroundColor":"#f2f2f2"}}>
                         <tr>
@@ -36,7 +36,7 @@ export default function TMSTable(){
                                 <th>TOTAL END</th>
                                 <th>TOTAL TIME ELAPSED</th>
                                 <th>TOOLS</th>
-                                
+                    
                         </tr>
                     </thead>
 
@@ -68,20 +68,7 @@ export default function TMSTable(){
                             <td>120/120/130LB</td>
                             <td>10 min</td>
                         </tr>
-                        <tr key="main" onClick={toggleExpander}>
-                            <td><input className="uk-checkbox" type="checkbox" /></td>
-                            <td className="uk-text-nowrap">4.</td>
-                            <td><div class="ml-6 text-sm border-solid border-black bg-purple-200 text-purple-600 rounded-full text-xs py-1" style={{"width":"90px", "height":"25px"}}><p><strong>New</strong></p></div></td>
-                            <td>1223 Huntinton Drive, Arcadia, CA 928394</td>
-                            <td>0/0/0LB</td>
-                            <td>120/120/130LB</td>
-                            <td>10 min</td>
-                        </tr>
-                        
                     </tbody>
-                
-                        
-                    
                 </table>
 
                 {tableState.expanded && 
@@ -89,7 +76,6 @@ export default function TMSTable(){
                     <table class="unis-info-table">
                         <thead style={{"backgroundColor":"#f2f2f2"}}>
                             <tr>
-                             
                                     <th>TASK ID</th>
                                     <th>STATUS</th>
                                     <th>P/U#</th>
