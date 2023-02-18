@@ -1,0 +1,12 @@
+.nav-link{
+    color:white;
+    font-size:24px;
+}
+
+.nav-link:hover{
+    /*background-color: white;*/
+}
+
+.bg-dark{
+    background-color: #444545 !important;
+}
