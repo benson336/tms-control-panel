@@ -3,6 +3,7 @@ import TMSHeader from './tmsheader';
 import TMSSearch from './tmssearch';
 import TMSPretable from './tmspretable';
 import TMSTable from './tmstable';
+import TMSFile from './tmsfile';
 //import { AbsoluteCenter, useToast } from '@chakra-ui/react'
 
 export default function Homepage(){
@@ -14,12 +15,13 @@ return (
         <TMSSearch />
         <TMSPretable />
         <TMSTable />
+        <TMSFile />
         
         
+
+<div id="view" class="h-screen w-screen flex flex-row" x-data="{ sidenav: true }">
     
-<div id="view" class="h-full w-screen flex flex-row" x-data="{ sidenav: true }" style={{"height":"100vh"}}>
-    
-      <div id="sidebar" class="bg-neutral-700 h-screen md:block shadow-xl px-3 overflow-x-hidden transition-transform duration-300 ease-in-out" x-show="sidenav" style={{"width":"12%"}}>
+      <div id="sidebar" class="bg-neutral-700 h-screen md:block shadow-xl px-3 overflow-x-hidden transition-transform duration-300 ease-in-out fixed" x-show="sidenav" style={{"width":"12%", "top":"0px"}}>
         <div class="space-y-6 md:space-y-10 mt-10">
           <div id="profile" class="space-y-3">
             {/*<img

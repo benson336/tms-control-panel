@@ -87,9 +87,6 @@ export default function TMSTable(){
             </div>
         </div>
 
-
-
-       
             
             {/*<div class=" p-4 br-1 br-grey100 br-ra4">
                 <table class="unis-info-table">

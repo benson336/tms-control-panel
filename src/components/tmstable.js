@@ -10,20 +10,22 @@ export default function TMSTable(){
 
 
     const toggleExpander = (e) =>{
-
+console.log("in");
         if (e.target.type === 'checkbox') return;
 
         if (!tableState.expanded) {
             setTableState({ expanded: true });
+      
           } else {
               setTableState({ expanded: false }); 
+        
             };
           
     }
 
     return (
         <>
-        <div style={{"position":"absolute", "left":"15%", "top":"440px", "width": "75%", "height": "6.0rem"}}> 
+        <div style={{"position":"absolute", "left":"15%", "top":"440px", "width": "75%"}}> 
             <div class="br-ra4" style={{"border":"3px solid #ececec"}}>
                 <table class="unis-info-table">
                     <thead style={{"backgroundColor":"#f2f2f2"}}>
@@ -53,7 +55,7 @@ export default function TMSTable(){
                         <tr key="main" onClick={toggleExpander}>
                             <td><input className="uk-checkbox" type="checkbox" /></td>
                             <td className="uk-text-nowrap">2.</td>
-                            <td><div class="ml-6 text-sm border-solid border-black bg-green-200 text-green-800 rounded-full text-xs py-1" style={{"width":"90px", "height":"25px"}}><p><strong>Completed</strong></p></div></td>
+                            <td><div class="ml-6 text-sm border-solid border-black bg-orange-200 text-amber-600 rounded-full text-xs py-1" style={{"width":"90px", "height":"25px"}}><p><strong>In Progress</strong></p></div></td>
                             <td>235 lOS Alanito Cir Drive, Anaheim, CA 92833</td>
                             <td>0/0/0LB</td>
                             <td>120/120/130LB</td>
@@ -68,8 +70,27 @@ export default function TMSTable(){
                             <td>120/120/130LB</td>
                             <td>10 min</td>
                         </tr>
+                        <tr key="main" onClick={toggleExpander}>
+                            <td><input className="uk-checkbox" type="checkbox" /></td>
+                            <td className="uk-text-nowrap">4.</td>
+                            <td><div class="ml-6 text-sm border-solid border-black bg-green-200 text-green-800 rounded-full text-xs py-1" style={{"width":"90px", "height":"25px"}}><p><strong>Completed</strong></p></div></td>
+                            <td>938 Las Tunas Blvd, Temple City, CA 928233</td>
+                            <td>0/0/0LB</td>
+                            <td>120/120/130LB</td>
+                            <td>10 min</td>
+                        </tr>
+                        <tr key="main" onClick={toggleExpander}>
+                            <td><input className="uk-checkbox" type="checkbox" /></td>
+                            <td className="uk-text-nowrap">5.</td>
+                            <td><div class="ml-6 text-sm border-solid border-black bg-green-200 text-green-800 rounded-full text-xs py-1" style={{"width":"90px", "height":"25px"}}><p><strong>Completed</strong></p></div></td>
+                            <td>145 Mission Blvd, La Habra, CA 928233</td>
+                            <td>0/0/0LB</td>
+                            <td>120/120/130LB</td>
+                            <td>10 min</td>
+                        </tr>  
                     </tbody>
-                </table>
+                </table> 
+        
 
                 {tableState.expanded && 
                 <div class="p-4 br-1 br-grey100 br-ra4">
@@ -100,17 +121,11 @@ export default function TMSTable(){
                             </tr>
                         </tbody>
                     </table>
-                </div>}
-
-                
+                </div>}        
             </div>
-            
-
-        
-
-           
         </div>
                
+        
         </>
     );
        
